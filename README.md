@@ -1,21 +1,21 @@
-import tkinter as tk
-from tkinter import messagebox
+import tkinter as tk #Khai báo thư viện tkinter
+from tkinter import messagebox #Từ tkinter tạo hộp thoại thông báo lỗi kết quả
 
-def App_tra_cuu_bang_cuu_chuong():
+def App_tra_cuu_bang_cuu_chuong(): # Hàm phép tính
     try:
-        so_bang = int(entry.get())
+        so_bang = int(entry.get()) #Nhập số đầu vào và gán tên so_bang
         if so_bang < 2 or so_bang > 9:
             messagebox.showerror("Lỗi", "Nhập số nguyên từ 2–9!")
             return
-        Listbox.delete(0, 'end')
-        for i in range(1, 11):
-            Listbox.insert('end', f"{so_bang} x {i} = {so_bang * i}")
-    except:
-        messagebox.showerror("Lỗi", "Vui lòng nhập số nguyên hợp lệ!")
+        Listbox.delete(0, 'end') # Xóa thông báo kết quả lỗi
+        for i in range(1, 11): #Tạo dãy vòng lặp số bị nhân từ 1 tới 10
+            Listbox.insert('end', f"{so_bang} x {i} = {so_bang * i}") # Điền công thức nhân vào khung kết quả
+    except:# Trường hợp còn lại của nhập số không phải là số nguyên
+        messagebox.showerror("Lỗi", "Vui lòng nhập số nguyên hợp lệ!") 
 
-def xoa_het():
-    entry.delete(0, 'end')
-    Listbox.delete(0, 'end')
+def xoa_het(): # Hàm xóa kết quả cũ
+    entry.delete(0, 'end') # Xóa dòng hiển thị ở ô nhập liệu
+    Listbox.delete(0, 'end') # Xóa dòng hiển thị ở khung kết quả
 
 
 from tkinter import *
