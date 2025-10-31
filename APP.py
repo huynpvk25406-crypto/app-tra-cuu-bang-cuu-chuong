@@ -11,7 +11,8 @@ def App_tra_cuu_bang_cuu_chuong():
         for i in range(1, 11):
             Listbox.insert('end', str(so_bang) +"x"+ str(i) +"="+ str(so_bang * i))
     except:
-        messagebox.showerror("Lỗi", "Vui lòng nhập số nguyên hợp lệ!") #ngoai le truong hop con lai cua nhap so khong phai la so nguyen
+        messagebox.showerror("Lỗi", "Vui lòng nhập số nguyên hợp lệ!") 
+        #ngoai le truong hop con lai cua nhap so khong phai la so nguyen
 
 def xoa_het():
     entry.delete(0, 'end')
